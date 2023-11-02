@@ -16,6 +16,7 @@ Including another URLconf
 """
 #from django.conf.urls import include
 from django.urls import re_path, include
+from host import views
 
 urlpatterns = [
     re_path(r'^', include('polls.urls')),
