@@ -19,5 +19,5 @@ from django.urls import re_path
 
 urlpatterns = [
     re_path(r'^', include('polls.urls')),
-    path(r'^host/', 'host.views.host'),
+    re_path(r'^host/', 'host.views.host'),
 ]
