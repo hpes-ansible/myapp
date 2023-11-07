@@ -27,7 +27,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+import socket
+def get_ipaddress():
+
+    host_name = socket.gethostname()
+    ip_address = socket.gethostbyname(host_name)
+    return "http://"+ip_address+""
+    
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = [get_ipaddress()]
+
 
 # Application definition
 
